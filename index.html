@@ -4,11 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/d352268da5.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="styles.css" />
     <title>Dice Game</title>
   </head>
   <body>
     <main>
+
+      <!-- Player 1 -->
       <section class="player player--0 player--active">
         <h2 class="name" id="name1">Player 1</h2>
         <p class="score" id="score0">43</p>
@@ -17,6 +23,8 @@
           <p class="current-score" id="current--0">0</p>
         </div>
       </section>
+
+      <!-- Player 2 -->
       <section class="player player--1">
         <h2 class="name" id="name2">Player 2</h2>
         <p class="score" id="score1">24</p>
@@ -26,11 +34,30 @@
         </div>
       </section>
 
+      <!-- Dice img -->
       <img src="images/dice-1.png" alt="Playing Dice" class="dice" />
+
+      <!-- Buttons -->
       <button class="btn btn--new">🎮 New Game</button>
       <button class="btn btn--roll">🎲 Roll Dice</button>
       <button class="btn btn--hold">🏁 Hold</button>
     </main>
+
+    <!-- Modal -->
+    <button class="help"><i class="fa-solid fa-circle-info fa-2x"></i></button>
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h2 class="description">Description</h2>
+      <p class="para">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus sed
+        fugiat minima iusto, neque nobis quis aliquid molestiae. Harum deserunt
+        veniam accusamus incidunt quae facilis ea odio quod, sed ab!
+      </p>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay hidden"></div>
+
     <script src="script.js"></script>
   </body>
 </html>

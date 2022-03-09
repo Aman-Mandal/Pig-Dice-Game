@@ -12,6 +12,26 @@ const btnNew = document.querySelector('.btn--new')
 const btnRoll = document.querySelector('.btn--roll')
 const btnHold = document.querySelector('.btn--hold')
 
+// Modal
+const modal = document.querySelector('.modal')
+const overlay = document.querySelector('.overlay')
+const btnHelp = document.querySelector('.help')
+const btncloseModal = document.querySelector('.close-modal')
+
+/* Modal Functions : */
+
+// closing Modal function
+const closeModal = function(){
+  modal.classList.add('hidden')
+  overlay.classList.add('hidden')
+}
+
+// Open Modal function
+const openModal = function(){
+  overlay.classList.remove('hidden')
+  modal.classList.remove('hidden')
+}
+
 // Declaring variables
 let scores, isPlaying, activePlayer, currentScore
 
@@ -101,3 +121,19 @@ btnHold.addEventListener('click', function () {
 
 // New Game button Functionality
 btnNew.addEventListener('click', init)
+
+// Help Button
+btnHelp.addEventListener('click',openModal)
+
+// closing Modal Btn
+btncloseModal.addEventListener('click', closeModal)
+
+// closing modal with overlay click
+overlay.addEventListener('click', closeModal)
+
+// key press to close modal
+document.addEventListener('keydown', function(event){
+  if(event.key === 'Escape' && !modal.classList.contains('hidden')){
+    closeModal()
+  }
+})
