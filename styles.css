@@ -202,9 +202,9 @@ main {
 
 .modal{
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 70%;
-  transform: translate(-30%, -70%);
+  transform: translate(-30%, -40%);
   width: 40%;
   background-color: white;
   padding: 6rem;
@@ -244,4 +244,5 @@ main {
 .para{
   font-size: 1.8rem;
   color: #2f2f2f;
+  line-height: 1.5;
 }
